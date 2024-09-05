@@ -68,7 +68,7 @@ const UserForm: React.FC = () => {
     } else {
       dispatch(addUser(formState));
       setFormState(initialFormState);
-      setFormErrors({}); 
+      setFormErrors({});
     }
   };
 
@@ -89,14 +89,14 @@ const UserForm: React.FC = () => {
   return (
     <>
       {/* Navbar */}
-      <nav className="w-full h-[5rem] bg-white text-center shadow-lg flex items-center justify-center">
-        <h2 className="text-4xl text-blue-600 font-bold">immence</h2>
+      <nav className="w-full h-[4rem] bg-white text-center shadow-lg flex items-center justify-center">
+        <h2 className="text-2xl sm:text-4xl text-blue-600 font-bold">immence</h2>
       </nav>
 
-      <div className="flex justify-center p-10 bg-gray-100 min-h-screen">
+      <div className="flex flex-col lg:flex-row justify-center lg:p-10 p-4 bg-gray-100 min-h-screen">
         {/* left section */}
-        <div className="w-1/2 p-[5rem] mx-[3rem]">
-          <h2 className="text-2xl font-semibold text-black mb-6">Create User</h2>
+        <div className="w-full lg:w-1/2 p-4 lg:p-10">
+          <h2 className="text-xl lg:text-2xl font-semibold text-black mb-6">Create User</h2>
           <form className="space-y-4">
             <div>
               <label className="block text-blue-600 font-semibold mb-2">First Name</label>
@@ -150,7 +150,7 @@ const UserForm: React.FC = () => {
               <button
                 type="button"
                 onClick={handleCreateUser}
-                className="bg-blue-600 text-white font-bold p-3 rounded-md"
+                className="bg-blue-600 text-white font-bold py-3 px-4 w-auto rounded-md"
               >
                 Create
               </button>
@@ -159,8 +159,8 @@ const UserForm: React.FC = () => {
         </div>
 
         {/* right section */}
-        <div className="w-1/2 p-[5rem] mx-[3rem]">
-          <h2 className="text-2xl font-semibold text-black mb-6">Details</h2>
+        <div className="w-full lg:w-1/2 p-4 lg:p-10">
+          <h2 className="text-xl lg:text-2xl font-semibold text-black mb-6">Details</h2>
           {users.length > 0 ? (
             <div className="space-y-4">
               {users.map((user) => (
